@@ -3,3 +3,51 @@
 html {
     scroll-behavior: smooth;
 }
+
+/* Banner text animation */
+.banner-text {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.banner-text:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.banner-text:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+/* Banner CTA animation */
+.banner-cta {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.8s;
+    display: inline-block;
+}
+
+/* Section title animation */
+.section-title {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+/* Section content animation */
+.section-content {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.4s;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

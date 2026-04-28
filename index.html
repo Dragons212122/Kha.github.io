@@ -24,6 +24,7 @@
   <meta name="twitter:image" content="https://dragons212122.github.io/Kha.github.io/public/banner.png">
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="src/style.css">
 
   <style>
     /* Bạn có thể đổi màu chủ đạo tại đây */
@@ -35,24 +36,56 @@
 </head>
 
 <body class="font-sans text-gray-800 bg-yellow-50">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 shadow-md">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-teal-600">Kha Dev</a>
+      <div class="hidden md:flex space-x-8">
+        <a href="#about-me" class="text-gray-700 hover:text-teal-500 transition-colors">About</a>
+        <a href="#skills" class="text-gray-700 hover:text-teal-500 transition-colors">Skills</a>
+        <a href="#projects" class="text-gray-700 hover:text-teal-500 transition-colors">Projects</a>
+        <a href="#experience" class="text-gray-700 hover:text-teal-500 transition-colors">Experience</a>
+        <a href="#education" class="text-gray-700 hover:text-teal-500 transition-colors">Education</a>
+        <a href="#contact" class="text-gray-700 hover:text-teal-500 transition-colors">Contact</a>
+      </div>
+      <!-- Mobile menu button -->
+      <button class="md:hidden text-gray-700" id="mobile-menu-btn">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="hidden md:hidden bg-white border-t" id="mobile-menu">
+      <div class="flex flex-col p-4 space-y-3">
+        <a href="#about-me" class="text-gray-700 hover:text-teal-500">About</a>
+        <a href="#skills" class="text-gray-700 hover:text-teal-500">Skills</a>
+        <a href="#projects" class="text-gray-700 hover:text-teal-500">Projects</a>
+        <a href="#experience" class="text-gray-700 hover:text-teal-500">Experience</a>
+        <a href="#education" class="text-gray-700 hover:text-teal-500">Education</a>
+        <a href="#contact" class="text-gray-700 hover:text-teal-500">Contact</a>
+      </div>
+    </div>
+  </nav>
+
   <main>
-    <section class="min-h-screen w-full flex flex-col justify-center items-center bg-[url('public/banner.jpg')] bg-cover bg-top">
-      <div class="w-full lg:w-[80%] p-12 bg-white/10 backdrop-blur-[2px] rounded-xl">
-        <h1 class="text-5xl lg:text-7xl font-bold mb-10 grid grid-cols-1 lg:gap-5">
-          <span class="banner-text">Hi, my name is <span class="text-teal-400">Pham Ngoc Kha</span></span>
+    <section class="min-h-screen w-full flex flex-col justify-center items-center bg-[url('/public/banner.png')] bg-cover bg-center">
+      <div class="w-full lg:w-[80%] p-12 bg-white/10 backdrop-blur-[2px] rounded-xl text-gray-800">
+        <h1 class="text-6xl font-bold mb-10 grid grid-col-1 lg:gap-5">
+          <span class="banner-text">Hi, my name is <span class="text-teal-400">Kha Dev</span></span>
           <span class="text-gray-800 banner-text">I'm a Web Developer.</span>
         </h1>
 
-        <a href="#about-me" class="inline-block uppercase border-2 border-teal-400 px-10 py-4 hover:bg-teal-400 hover:text-white transition-all duration-300 cursor-pointer font-medium tracking-wider focus:ring focus:ring-teal-300">
-          Know more
+        <a href="#about-me" class="banner-cta inline-block uppercase border-2 border-teal-400 p-3 hover:bg-teal-400 hover:text-white transition-all cursor-pointer">
+          <span class="text-xl pl-8 pr-8 pt-3 pb-3 font-light focus:outline-none focus:ring focus:ring-teal-300">Know more</span>
         </a>
       </div>
     </section>
 
     <section id="about-me" class="bg-teal-400 min-h-screen w-full flex flex-col justify-center items-center p-6 lg:p-12 text-white">
       <div class="w-full lg:w-[60%] mb-5">
-        <h2 class="uppercase text-3xl lg:text-5xl text-center font-bold mb-12">About Me</h2>
-        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-3">
+        <h2 class="uppercase text-3xl lg:text-5xl text-center font-bold mb-12 section-title">About Me</h2>
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-3 section-content">
           <div class="flex justify-center items-center col-span-1">
             <img class="object-cover rounded-2xl shadow-2xl max-w-xs w-full border-4 border-white/20" 
                  src="public/imgs/my-avatar.png" title="My avatar" alt="My avatar" />
@@ -73,31 +106,262 @@
       </div>
     </section>
 
-    <section id="projects" class="bg-gray-50 py-20 w-full flex flex-col items-center">
-        <h2 class="uppercase text-3xl lg:text-5xl font-bold mb-12">My Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-[80%]">
-            <div class="group bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:-translate-y-2 transition-all">
-                <div class="h-56 bg-gray-200"></div>
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">Project Awesome</h3>
-                    <p class="text-gray-600 mb-4">A high-performance web application built with React and Tailwind.</p>
-                    <span class="text-teal-500 font-bold">View Project →</span>
+    <!-- Skills Section -->
+    <section id="skills" class="bg-white py-20 w-full flex flex-col items-center">
+        <h2 class="uppercase text-3xl lg:text-5xl font-bold mb-12 section-title">Skills & Tech Stack</h2>
+        <div class="w-[90%] section-content">
+            <!-- Frontend -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-center text-teal-600">Frontend Development</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="bg-gray-50 px-6 py-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <span class="text-3xl mb-2">⚛️</span>
+                        <span class="font-semibold">React</span>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <span class="text-3xl mb-2">💚</span>
+                        <span class="font-semibold">Vue.js</span>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <span class="text-3xl mb-2">🎨</span>
+                        <span class="font-semibold">Tailwind</span>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <span class="text-3xl mb-2">📄</span>
+                        <span class="font-semibold">HTML5</span>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <span class="text-3xl mb-2">🎭</span>
+                        <span class="font-semibold">CSS3</span>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <span class="text-3xl mb-2">📜</span>
+                        <span class="font-semibold">JavaScript</span>
+                    </div>
                 </div>
             </div>
+            <!-- Backend -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-center text-teal-600">Backend Development</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="bg-gray-50 px-6 py-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <span class="text-3xl mb-2">🟢</span>
+                        <span class="font-semibold">Node.js</span>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <span class="text-3xl mb-2">🐍</span>
+                        <span class="font-semibold">Python</span>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <span class="text-3xl mb-2">☕</span>
+                        <span class="font-semibold">Java</span>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <span class="text-3xl mb-2">🍃</span>
+                        <span class="font-semibold">MongoDB</span>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <span class="text-3xl mb-2">🐬</span>
+                        <span class="font-semibold">MySQL</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Tools -->
+            <div>
+                <h3 class="text-2xl font-bold mb-6 text-center text-teal-600">Tools & Others</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="bg-gray-50 px-6 py-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <span class="text-3xl mb-2">🐙</span>
+                        <span class="font-semibold">Git</span>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <span class="text-3xl mb-2">🐱</span>
+                        <span class="font-semibold">GitHub</span>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <span class="text-3xl mb-2">📦</span>
+                        <span class="font-semibold">npm</span>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <span class="text-3xl mb-2">💻</span>
+                        <span class="font-semibold">VS Code</span>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <span class="text-3xl mb-2">🐳</span>
+                        <span class="font-semibold">Docker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="bg-gray-50 py-20 w-full flex flex-col items-center">
+        <h2 class="uppercase text-3xl lg:text-5xl font-bold mb-12 section-title">Experience</h2>
+        <div class="w-[90%] max-w-4xl section-content">
+            <div class="space-y-8">
+                <!-- Experience 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md border-l-4 border-teal-400">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Web Developer Intern</h3>
+                            <p class="text-teal-600 font-medium">Tech Company XYZ</p>
+                        </div>
+                        <span class="text-gray-500 text-sm bg-gray-100 px-3 py-1 rounded-full">2024 - Present</span>
+                    </div>
+                    <p class="text-gray-600">Developed responsive web applications using React and Node.js. Collaborated with cross-functional teams to deliver high-quality projects on time.</p>
+                </div>
+                <!-- Experience 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md border-l-4 border-teal-400">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Freelance Developer</h3>
+                            <p class="text-teal-600 font-medium">Self-employed</p>
+                        </div>
+                        <span class="text-gray-500 text-sm bg-gray-100 px-3 py-1 rounded-full">2023 - Present</span>
+                    </div>
+                    <p class="text-gray-600">Built custom websites for small businesses and individuals. Managed client relationships and delivered projects according to specifications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="bg-white py-20 w-full flex flex-col items-center">
+        <h2 class="uppercase text-3xl lg:text-5xl font-bold mb-12 section-title">Education</h2>
+        <div class="w-[90%] max-w-4xl section-content">
+            <div class="space-y-8">
+                <!-- Education 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md border-l-4 border-purple-400">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Bachelor of Computer Science</h3>
+                            <p class="text-purple-600 font-medium">University of Technology</p>
+                        </div>
+                        <span class="text-gray-500 text-sm bg-gray-100 px-3 py-1 rounded-full">2022 - 2026</span>
+                    </div>
+                    <p class="text-gray-600">Major in Software Engineering. GPA: 3.5/4.0. Relevant coursework: Data Structures, Algorithms, Web Development, Database Systems.</p>
+                </div>
+                <!-- Education 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md border-l-4 border-purple-400">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">High School Diploma</h3>
+                            <p class="text-purple-600 font-medium">High School ABC</p>
+                        </div>
+                        <span class="text-gray-500 text-sm bg-gray-100 px-3 py-1 rounded-full">2019 - 2022</span>
+                    </div>
+                    <p class="text-gray-600">Specialized in Mathematics and Informatics. Graduated with honors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="bg-gray-50 py-20 w-full flex flex-col items-center">
+        <h2 class="uppercase text-3xl lg:text-5xl font-bold mb-12 section-title">My Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-[90%] section-content">
+            <!-- Project 1 -->
             <div class="group bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:-translate-y-2 transition-all">
-                <div class="h-56 bg-gray-200"></div>
+                <div class="h-48 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
+                    <span class="text-white text-4xl font-bold">🛒</span>
+                </div>
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">Network Tool</h3>
-                    <p class="text-gray-600 mb-4">Simulation tool for network configurations and Packet Tracer labs.</p>
-                    <span class="text-teal-500 font-bold">View Project →</span>
+                    <h3 class="text-2xl font-bold mb-2">E-Commerce Store</h3>
+                    <p class="text-gray-600 mb-4">A full-featured online shopping platform with cart, checkout, and payment integration.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-teal-100 text-teal-700 px-2 py-1 rounded">React</span>
+                        <span class="text-xs bg-teal-100 text-teal-700 px-2 py-1 rounded">Node.js</span>
+                        <span class="text-xs bg-teal-100 text-teal-700 px-2 py-1 rounded">MongoDB</span>
+                    </div>
+                    <a href="#" class="text-teal-500 font-bold hover:underline">View Project →</a>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="group bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:-translate-y-2 transition-all">
+                <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                    <span class="text-white text-4xl font-bold">📋</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Task Manager</h3>
+                    <p class="text-gray-600 mb-4">A productivity application for managing tasks, deadlines, and team collaboration.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">Vue.js</span>
+                        <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">Firebase</span>
+                        <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">Tailwind</span>
+                    </div>
+                    <a href="#" class="text-teal-500 font-bold hover:underline">View Project →</a>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="group bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:-translate-y-2 transition-all">
+                <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                    <span class="text-white text-4xl font-bold">🌤️</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Weather Dashboard</h3>
+                    <p class="text-gray-600 mb-4">Real-time weather application with forecasts, maps, and location-based alerts.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">JavaScript</span>
+                        <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">OpenWeather API</span>
+                        <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">CSS3</span>
+                    </div>
+                    <a href="#" class="text-teal-500 font-bold hover:underline">View Project →</a>
+                </div>
+            </div>
+            <!-- Project 4 -->
+            <div class="group bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:-translate-y-2 transition-all">
+                <div class="h-48 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                    <span class="text-white text-4xl font-bold">💬</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Chat Application</h3>
+                    <p class="text-gray-600 mb-4">Real-time messaging app with group chats, file sharing, and online status.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-orange-100 text-orange-700 px-2 py-1 rounded">Socket.io</span>
+                        <span class="text-xs bg-orange-100 text-orange-700 px-2 py-1 rounded">Express</span>
+                        <span class="text-xs bg-orange-100 text-orange-700 px-2 py-1 rounded">React</span>
+                    </div>
+                    <a href="#" class="text-teal-500 font-bold hover:underline">View Project →</a>
+                </div>
+            </div>
+            <!-- Project 5 -->
+            <div class="group bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:-translate-y-2 transition-all">
+                <div class="h-48 bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center">
+                    <span class="text-white text-4xl font-bold">🎬</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Movie Database</h3>
+                    <p class="text-gray-600 mb-4">A film discovery platform with search, favorites, and recommendations.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-pink-100 text-pink-700 px-2 py-1 rounded">React</span>
+                        <span class="text-xs bg-pink-100 text-pink-700 px-2 py-1 rounded">TMDB API</span>
+                        <span class="text-xs bg-pink-100 text-pink-700 px-2 py-1 rounded">Redux</span>
+                    </div>
+                    <a href="#" class="text-teal-500 font-bold hover:underline">View Project →</a>
+                </div>
+            </div>
+            <!-- Project 6 -->
+            <div class="group bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:-translate-y-2 transition-all">
+                <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                    <span class="text-white text-4xl font-bold">📊</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Analytics Dashboard</h3>
+                    <p class="text-gray-600 mb-4">Data visualization tool with charts, reports, and export capabilities.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">Chart.js</span>
+                        <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">Python</span>
+                        <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">Flask</span>
+                    </div>
+                    <a href="#" class="text-teal-500 font-bold hover:underline">View Project →</a>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="bg-white py-24 w-full flex flex-col justify-center items-center p-6 text-gray-800">
-      <div class="w-full lg:w-[60%] mb-5 text-center">
-        <h2 class="uppercase text-3xl lg:text-5xl font-bold mb-6">Contact</h2>
+      <div class="w-full lg:w-[60%] mb-5 text-center section-content">
+        <h2 class="uppercase text-3xl lg:text-5xl font-bold mb-6 section-title">Contact</h2>
         <p class="flex flex-col items-center py-5">
           <span class="text-2xl text-teal-500 mb-3 font-bold">I LOOK FORWARD TO WORKING WITH YOU</span>
           <span class="text-lg text-gray-500">Let's connect for work or a coffee chat!</span>

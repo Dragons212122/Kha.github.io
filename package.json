@@ -85,6 +85,7 @@
     "reusify": "^1.1.0",
     "rolldown": "^1.0.0-rc.17",
     "run-parallel": "^1.2.0",
+    "scrollreveal": "^4.0.9",
     "source-map-js": "^1.2.1",
     "sucrase": "^3.35.1",
     "supports-preserve-symlinks-flag": "^1.0.0",
