@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  
+  <link rel="icon" href="/favicon.ico" />
+  <title>Pham Ngoc Kha | Web Developer</title>
+
+  <meta name="title" content="Pham Ngoc Kha - Developever">
+  <meta name="description" content="Trang web cá nhân của Phạm Ngọc Kha, sinh viên Công nghệ thông tin chuyên về lập trình web và phần mềm.">
+  <meta name="keywords" content="Pham Ngoc Kha, Web Developer, IT Student">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="author" content="Pham Ngoc Kha">
+  <meta property="og:title" content="Pham Ngoc Kha | Portfolio">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dragons212122.github.io/phamngockha24020002.github.io/">
+
+  <meta property="og:image" content="https://dragons212122.github.io/phamngockha24020002.github.io/public/banner.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pham Ngoc Kha | Portfolio">
+  <meta name="twitter:image" content="https://dragons212122.github.io/phamngockha24020002.github.io/public/banner.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Bạn có thể đổi màu chủ đạo tại đây */
+    :root {
+      --primary-color: #21288f; /* Teal-400 */
+      --primary-dark: #0d9488;  /* Teal-600 */
+    }
+  </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-yellow-50">
+  <main>
+    <section class="min-h-screen w-full flex flex-col justify-center items-center bg-[url('public/banner.jpg')] bg-cover bg-top">
+      <div class="w-full lg:w-[80%] p-12 bg-white/10 backdrop-blur-[2px] rounded-xl">
+        <h1 class="text-5xl lg:text-7xl font-bold mb-10 grid grid-cols-1 lg:gap-5">
+          <span class="banner-text">Hi, my name is <span class="text-teal-400">Pham Ngoc Kha</span></span>
+          <span class="text-gray-800 banner-text">I'm a Web Developer.</span>
+        </h1>
+
+        <a href="#about-me" class="inline-block uppercase border-2 border-teal-400 px-10 py-4 hover:bg-teal-400 hover:text-white transition-all duration-300 cursor-pointer font-medium tracking-wider focus:ring focus:ring-teal-300">
+          Know more
+        </a>
+      </div>
+    </section>
+
+    <section id="about-me" class="bg-teal-400 min-h-screen w-full flex flex-col justify-center items-center p-6 lg:p-12 text-white">
+      <div class="w-full lg:w-[60%] mb-5">
+        <h2 class="uppercase text-3xl lg:text-5xl text-center font-bold mb-12">About Me</h2>
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-3">
+          <div class="flex justify-center items-center col-span-1">
+            <img class="object-cover rounded-2xl shadow-2xl max-w-xs w-full border-4 border-white/20" 
+                 src="public/imgs/my-avatar.png" title="My avatar" alt="My avatar" />
+          </div>
+          <div class="col-span-1 lg:col-span-2 flex justify-center items-center">
+            <div class="p-0 text-center lg:p-8 lg:text-start">
+              <p class="pb-6 text-xl font-light leading-relaxed">
+                I love programming, application development, and research software architecture. 
+                My career objective is to become a Senior Software Engineer who masters software 
+                architecture, design principles, and modern technologies.
+              </p>
+              <a href="#" target="_blank" class="inline-block uppercase border-2 border-white px-8 py-3 text-white hover:bg-white hover:text-teal-500 transition-all font-semibold">
+                View My CV
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="bg-gray-50 py-20 w-full flex flex-col items-center">
+        <h2 class="uppercase text-3xl lg:text-5xl font-bold mb-12">My Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-[80%]">
+            <div class="group bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:-translate-y-2 transition-all">
+                <div class="h-56 bg-gray-200"></div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Project Awesome</h3>
+                    <p class="text-gray-600 mb-4">A high-performance web application built with React and Tailwind.</p>
+                    <span class="text-teal-500 font-bold">View Project →</span>
+                </div>
+            </div>
+            <div class="group bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:-translate-y-2 transition-all">
+                <div class="h-56 bg-gray-200"></div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Network Tool</h3>
+                    <p class="text-gray-600 mb-4">Simulation tool for network configurations and Packet Tracer labs.</p>
+                    <span class="text-teal-500 font-bold">View Project →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-white py-24 w-full flex flex-col justify-center items-center p-6 text-gray-800">
+      <div class="w-full lg:w-[60%] mb-5 text-center">
+        <h2 class="uppercase text-3xl lg:text-5xl font-bold mb-6">Contact</h2>
+        <p class="flex flex-col items-center py-5">
+          <span class="text-2xl text-teal-500 mb-3 font-bold">I LOOK FORWARD TO WORKING WITH YOU</span>
+          <span class="text-lg text-gray-500">Let's connect for work or a coffee chat!</span>
+        </p>
+      </div>
+      <a href="mailto:ngockha1900@gmail.com" class="border-2 border-teal-400 px-12 py-4 bg-teal-400 text-white hover:bg-white hover:text-teal-400 transition-all font-bold uppercase tracking-widest shadow-lg">
+        Send An Email Now
+      </a>
+    </section>
+  </main>
+
+  <footer class="bg-neutral-900 py-16 flex flex-col justify-center items-center text-white">
+    <div class="flex space-x-10 mb-10">
+      <a href="#" class="opacity-50 hover:opacity-100 hover:-translate-y-1 transition-all">
+        <img class="w-8 invert" src="public/imgs/github.svg" alt="Github" />
+      </a>
+      <a href="#" class="opacity-50 hover:opacity-100 hover:-translate-y-1 transition-all">
+        <img class="w-8 invert" src="public/imgs/linkedin.svg" alt="Linkedin" />
+      </a>
+       <a href="#" class="opacity-50 hover:opacity-100 hover:-translate-y-1 transition-all">
+         <img class="w-8 invert" src="public/imgs/twitter.svg" alt="Twitter" />
+       </a>
+    </div>
+    <hr class="w-1/4 border-gray-700 mb-8"/>
+    <p class="text-gray-500 text-sm italic">©2026 - Designed by Ngoc Kha</p>
+  </footer>
+
+  </body>
+</html>
